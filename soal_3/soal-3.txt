@@ -1,0 +1,15 @@
+Program Menghitung Total Diskon
+    DECLARE totalPembelian, diskon : Number
+
+BEGIN
+    INPUT(totalPembelian)
+    SWITCH(totalPembelian)
+        CASE of totalPembelian > 1000000:
+            diskon = (5/100) * harga
+        CASE of totalPembelian > 500000 AND totalPembelian <= 1000000:
+            diskon = (5/100) * harga
+        DEFAULT:
+            diskon = 0
+    END SWITCH
+    PRINT diskon
+END

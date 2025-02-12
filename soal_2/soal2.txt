@@ -1,0 +1,65 @@
+BEGIN
+
+    PRINT "Pilih jenis suhu masukan:"
+    PRINT "1. Celsius"
+    PRINT "2. Reamur"
+    PRINT "3. Fahrenheit"
+    PRINT "4. Kelvin"
+    INPUT pilihan
+
+    PRINT "Masukkan nilai suhu:"    
+    INPUT suhu
+
+    IF pilihan == 1 THEN
+        SET celsius   = suhu
+        SET reamur    = celsius * 0.8
+        SET fahrenheit = (celsius * 1.8) + 32
+        SET kelvin    = celsius + 273.15
+
+        PRINT "Hasil konversi:"
+        PRINT "Celsius   = " + celsius
+        PRINT "Reamur    = " + reamur
+        PRINT "Fahrenheit = " + fahrenheit
+        PRINT "Kelvin    = " + kelvin
+
+    ELSE IF pilihan == 2 THEN
+        SET reamur = suhu
+        SET celsius   = reamur / 0.8
+        SET fahrenheit = (celsius * 1.8) + 32
+        SET kelvin    = celsius + 273.15
+
+        PRINT "Hasil konversi:"
+        PRINT "Reamur    = " + reamur
+        PRINT "Celsius   = " + celsius
+        PRINT "Fahrenheit = " + fahrenheit
+        PRINT "Kelvin    = " + kelvin
+
+    ELSE IF pilihan == 3 THEN
+        SET fahrenheit = suhu
+        SET celsius   = (fahrenheit - 32) / 1.8
+        SET reamur    = celsius * 0.8
+        SET kelvin    = celsius + 273.15
+
+        PRINT "Hasil konversi:"
+        PRINT "Fahrenheit = " + fahrenheit
+        PRINT "Celsius   = " + celsius
+        PRINT "Reamur    = " + reamur
+        PRINT "Kelvin    = " + kelvin
+
+    ELSE IF pilihan == 4 THEN
+        SET kelvin = suhu
+        SET celsius   = kelvin - 273.15
+        SET reamur    = celsius * 0.8
+        SET fahrenheit = (celsius * 1.8) + 32
+
+        PRINT "Hasil konversi:"
+        PRINT "Kelvin    = " + kelvin
+        PRINT "Celsius   = " + celsius
+        PRINT "Reamur    = " + reamur
+        PRINT "Fahrenheit = " + fahrenheit
+
+    ELSE
+        PRINT "Pilihan tidak valid. Harap pilih antara 1-4."
+    END IF
+
+END
