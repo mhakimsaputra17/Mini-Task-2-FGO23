@@ -3,7 +3,7 @@ Program Menghitung Total Diskon
 
 BEGIN
     INPUT(totalPembelian)
-    SWITCH(totalPembelian)
+    SWITCH(true)
         CASE of totalPembelian > 1000000:
             diskon = (10/100) * harga
         CASE of totalPembelian > 500000 AND totalPembelian <= 1000000:
